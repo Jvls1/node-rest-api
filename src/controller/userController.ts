@@ -5,16 +5,7 @@ interface UserController {
 
 const saveContent = async (request: any, response: any) => {
     try {
-        const { body } = request;
-        console.log(
-            `[POST] ${JSON.stringify(body)}`
-        )
-
-        if (!body.uuid) return Exception.RequiredFields("uuid", response);
-
-        const result = await contentService.saveContent(body);
-
-        return response.status(201).json(result)
+        return response.status(201).json()
     } catch (ex) {
         throw ex
     }
@@ -22,16 +13,7 @@ const saveContent = async (request: any, response: any) => {
 
 const getContent = async (request: any, response: any) => {
     try {
-        const uuid = request.params.uuid;
-        console.log(
-            `[GET] UUID = uuid`
-        )
-
-        if (!uuid) return Exception.RequiredFields("uuid", response);
-
-        const result = await contentService.getContent(uuid);
-
-        return response.status(200).json(result);
+        return response.status(200).json();
     } catch (ex) {
         throw ex
     }
