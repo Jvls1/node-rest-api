@@ -3,17 +3,21 @@ interface UserController {
     getContent(request: any, response: any): any;
 }
 
-const saveContent = async (request: any, response: any) => {
+const getContent = async (request: any, response: any) => {
     try {
-        return response.status(201).json()
+        // console.log(request);
+        // console.log(response);
+        return response.status(200).json();
     } catch (ex) {
         throw ex
     }
 }
 
-const getContent = async (request: any, response: any) => {
+const saveContent = async (request: any, response: any) => {
     try {
-        return response.status(200).json();
+        console.log(typeof(request));
+        console.log(typeof(response));
+        return response.status(201).json()
     } catch (ex) {
         throw ex
     }
