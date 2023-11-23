@@ -1,4 +1,3 @@
-# nodejs-with-ts
-NodeJS with TypeScript base API
+# Node Rest API
 
-I will use this repository to storage what I'm studyng about Node
+In this project I learned about how to create a Rest API using NodeJS with TypeScript, following community standards, I also used Prisma technology as an ORM to connect to the Postgres database, which is in a docker container
